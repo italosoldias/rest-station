@@ -2,6 +2,7 @@ package com.dias.station.entities;
 
 import java.util.Objects;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,8 +23,12 @@ public class Game {
 	private String plataforma;
 	private Double nota;
 	private String urlImagem;
+	@Column(columnDefinition = "TEXT")
 	private String descricaoLonga;
+	@Column(columnDefinition = "TEXT")
 	private String descricaoCurta;
+	
+	public Game() {};
 	
 	public Game(Long id, String titulo, Integer ano, String genero, String plataforma, Double nota, String urlImagem,
 			String descricaoLonga, String descricaoCurta) {
